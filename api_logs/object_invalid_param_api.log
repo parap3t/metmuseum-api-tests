@@ -1,0 +1,48 @@
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - DEBUG - Код API ответа: 404
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-14 00:31:34 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/-10000000
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - DEBUG - Код API ответа: 404
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/999999999
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - DEBUG - Код API ответа: 404
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-14 00:31:35 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/absbsbs
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - DEBUG - Код API ответа: 400
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:31:36 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/-10000000
+2026-01-14 00:31:37 - api_tests.object_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:31:37 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:31:37 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:31:37 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/999999999
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/absbsbs
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:31:38 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - DEBUG - API ответ не пуст True
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/-10000000
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - DEBUG - API ответ не пуст True
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:31:39 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/999999999
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - DEBUG - API ответ не пуст True
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects/absbsbs
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - DEBUG - API ответ не пуст True
+2026-01-14 00:31:40 - api_tests.object_invalid_param_api - INFO - === Конец теста test_data_content ===

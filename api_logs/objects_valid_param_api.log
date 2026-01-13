@@ -1,0 +1,37 @@
+2026-01-14 00:32:36 - api_tests.objects_valid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-14 00:32:36 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22&departmentIds=3|9|12
+2026-01-14 00:32:43 - api_tests.objects_valid_param_api - DEBUG - Код API ответа: 200
+2026-01-14 00:32:43 - api_tests.objects_valid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-14 00:32:43 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:32:43 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=1
+2026-01-14 00:32:44 - api_tests.objects_valid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:32:44 - api_tests.objects_valid_param_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-14 00:32:44 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:32:44 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:32:44 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22&departmentIds=3|9|12
+2026-01-14 00:32:49 - api_tests.objects_valid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:32:49 - api_tests.objects_valid_param_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-14 00:32:49 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:32:49 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-14 00:32:49 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22
+2026-01-14 00:33:01 - api_tests.objects_valid_param_api - DEBUG - API ответ является словарём: True
+2026-01-14 00:33:01 - api_tests.objects_valid_param_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-14 00:33:01 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-14 00:33:01 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:33:01 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=1
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - DEBUG - Значение по ключу total: 19121
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs: 19121
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:33:02 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22&departmentIds=3|9|12
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - DEBUG - Значение по ключу total: 233026
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs: 233026
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-14 00:33:08 - api_tests.objects_valid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22
+2026-01-14 00:33:22 - api_tests.objects_valid_param_api - DEBUG - Значение по ключу total: 499778
+2026-01-14 00:33:22 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs: 499778
+2026-01-14 00:33:22 - api_tests.objects_valid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
+2026-01-14 00:33:22 - api_tests.objects_valid_param_api - INFO - === Конец теста test_data_content ===
