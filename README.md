@@ -29,10 +29,10 @@ tests/
 ├── src/
 │ ├── API_param_builder.py # Класс для построения параметризованных API
 │ └── API_test_template.py # Шаблон API тестирования
-├── test_search_.py # Тесты API Search
-├── test_objects_.py # Тесты API Objects
-├── test_object_*.py # Тесты API Object
-└── test_base_dep_api.py # Тесты API Departments
+├── Search/ # Тесты API Search
+├── Objects/ # Тесты API Objects
+├── Object/ # Тесты API Object
+└── Departments/ # Тесты API Departments
 
 config/
 └── logger.py # Конфигурация логирования
