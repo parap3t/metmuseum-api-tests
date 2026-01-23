@@ -12,8 +12,8 @@ class APITestTemplate(ABC):
             try:
                 response = requests.get(api_url, timeout=timeout)
                 return response
-            except Timeout as e:
-                pytest.skip(f"Таймаут при запросе к API: {e}")
+            except Timeout:
+                pytest.fail(f"API не отвечает {timeout}сек. Сервис перегружен или умер")
             except RequestException as e:
                 pytest.skip(f"API недоступно: {e}")
 
