@@ -8,9 +8,11 @@ from tests.src.API_param_builder import APIBuilder
 
 @pytest.mark.object
 class TestValidParams(APITestTemplate):
+    """Тесты для проверки API объектов с валидными параметрами."""
 
     BASE_API = "https://collectionapi.metmuseum.org/public/collection/v1/objects"
 
+    # Валидные URL для тестирования позитивных сценариев
     VALID_APIS = [
         (APIBuilder.build_url_with_id(BASE_API, 437133)),
         (APIBuilder.build_url_with_id(BASE_API, 45734))
@@ -20,6 +22,7 @@ class TestValidParams(APITestTemplate):
     @pytest.mark.smoke
     @pytest.mark.positive
     def test_status_code(self, make_request):
+        """Проверяет корректный HTTP статус-код для валидного запроса."""
         TestValidParams.logger.info("=== Начало теста test_status_code ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {TestValidParams.VALID_APIS[0]}")
@@ -34,6 +37,7 @@ class TestValidParams(APITestTemplate):
     @pytest.mark.validation
     @pytest.mark.parametrize("api_url", VALID_APIS)
     def test_data_structure(self, api_url, make_request):
+        """Проверяет структуру данных для валидных объектов."""
         TestValidParams.logger.info("=== Начало теста test_data_structure ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {api_url}")
@@ -57,6 +61,7 @@ class TestValidParams(APITestTemplate):
     @pytest.mark.positive
     @pytest.mark.parametrize("api_url", VALID_APIS)
     def test_data_content(self, api_url, make_request):
+        """Проверяет наличие данных в ответе для валидных объектов."""
         TestValidParams.logger.info("=== Начало теста test_data_content ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {api_url}")
@@ -70,4 +75,3 @@ class TestValidParams(APITestTemplate):
 
         assert response_json
         TestValidParams.logger.debug(f"API ответ не пуст {response_json != {}}")
-

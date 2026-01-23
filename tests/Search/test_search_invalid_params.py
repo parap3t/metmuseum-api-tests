@@ -7,21 +7,27 @@ from tests.src.API_param_builder import APIBuilder
 
 @pytest.mark.search
 class TestInvalidParams(APITestTemplate):
+    """Тесты для проверки API поиска с невалидными параметрами."""
+
     BASE_API = "https://collectionapi.metmuseum.org/public/collection/v1/search"
 
+    # Невалидные параметры для тестирования поиска
     INVALID_APIS = [
-
+        # Невалидные параметры без поискового запроса
         APIBuilder.build_url(BASE_API, isHighlight=True),
         APIBuilder.build_url(BASE_API, title=True),
         APIBuilder.build_url(BASE_API, departmentId=1),
 
+        # Невалидные типы параметров
         APIBuilder.build_url(BASE_API, q="test", isHighlight=123),
         APIBuilder.build_url(BASE_API, q="test", departmentId=-1),
         APIBuilder.build_url(BASE_API, q="test", geoLocation=123),
 
+        # Невалидные форматы дат
         APIBuilder.build_url(BASE_API, q="test", dateBegin="abc", dateEnd="def"),
         APIBuilder.build_url(BASE_API, q="test", dateBegin=999999, dateEnd=-999999),
 
+        # Невалидные поисковые запросы
         APIBuilder.build_url(BASE_API, q="null"),
         APIBuilder.build_url(BASE_API, q="undefined"),
         APIBuilder.build_url(BASE_API, q=""),
@@ -32,13 +38,13 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url", INVALID_APIS)
     def test_status_code(self, api_url, make_request):
+        """Проверяет допустимые статус-коды для невалидных параметров поиска."""
         TestInvalidParams.logger.info("=== Начало теста test_status_code ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         assert response.status_code in [200, 400, 422, 502]
-
         TestInvalidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestInvalidParams.logger.info("=== Конец теста test_status_code ===")
@@ -46,6 +52,7 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url", INVALID_APIS)
     def test_data_structure(self, api_url, make_request):
+        """Проверяет структуру данных при невалидных параметрах поиска."""
         TestInvalidParams.logger.info("=== Начало теста test_data_structure ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
@@ -59,10 +66,10 @@ class TestInvalidParams(APITestTemplate):
         if response.status_code in [400, 422]:
             try:
                 response_json = response.json()
-                TestInvalidParams.logger.debug(f"API вернул JSON для ошибки: {response_json}")
+                TestInvalidParams.logger.debug(f"JSON ответ для ошибки: {response_json}")
             except:
                 assert response.text
-                TestInvalidParams.logger.debug(f"API вернул текст для ошибки: {response.text[:100]}...")
+                TestInvalidParams.logger.debug(f"Текстовый ответ для ошибки: {response.text[:100]}...")
             return
 
         try:
@@ -78,14 +85,14 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url", INVALID_APIS)
     def test_data_content(self, api_url, make_request):
+        """Проверяет содержимое данных при невалидных параметрах поиска."""
         TestInvalidParams.logger.info("=== Начало теста test_data_content ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         if response.status_code in [400, 422, 502]:
-            TestInvalidParams.logger.warning(
-                f"Пропускаем проверку контента для статуса {response.status_code}: {api_url}")
+            TestInvalidParams.logger.warning(f"Пропускаем проверку для статуса {response.status_code}")
             return
 
         try:
@@ -102,10 +109,9 @@ class TestInvalidParams(APITestTemplate):
 
         object_ids_length = len(object_ids)
 
-        TestInvalidParams.logger.debug(f"API вернул: total={total}, objectIDs length={object_ids_length}")
+        TestInvalidParams.logger.debug(f"total={total}, objectIDs length={object_ids_length}")
 
         assert total == object_ids_length
-        TestInvalidParams.logger.debug(
-            f"Количество элементов в objectIDs равно значению total: {total == object_ids_length}")
+        TestInvalidParams.logger.debug(f"Количество элементов в objectIDs равно total: {total == object_ids_length}")
 
         TestInvalidParams.logger.info("=== Конец теста test_data_content ===")

@@ -4,14 +4,18 @@ from models.objects import ObjectsSchema
 from config.logger import APILogger
 from tests.src.API_test_template import APITestTemplate
 
+
 @pytest.mark.search
 class TestBaseAPI(APITestTemplate):
+    """Тесты для базового API поиска объектов музея."""
+
     API_URL = "https://collectionapi.metmuseum.org/public/collection/v1/search?q="
     logger = APILogger("search_base_api")
 
     @pytest.mark.smoke
     @pytest.mark.positive
     def test_status_code(self, make_request):
+        """Проверяет корректный HTTP статус-код для пустого поискового запроса."""
         TestBaseAPI.logger.info("=== Начало теста test_status_code ===")
 
         response = make_request(TestBaseAPI.API_URL)
@@ -24,6 +28,7 @@ class TestBaseAPI(APITestTemplate):
     @pytest.mark.positive
     @pytest.mark.validation
     def test_data_structure(self, make_request):
+        """Проверяет структуру данных в ответе на пустой поисковый запрос."""
         TestBaseAPI.logger.info("=== Начало теста test_data_structure ===")
 
         response = make_request(TestBaseAPI.API_URL)
@@ -31,6 +36,7 @@ class TestBaseAPI(APITestTemplate):
         try:
             response_json = response.json()
 
+            # Нормализуем данные для валидации
             if response_json.get("objectIDs") is None:
                 response_json["objectIDs"] = []
 
@@ -50,6 +56,7 @@ class TestBaseAPI(APITestTemplate):
 
     @pytest.mark.positive
     def test_data_content(self, make_request):
+        """Проверяет данные в ответе на пустой поисковый запрос."""
         TestBaseAPI.logger.info("=== Начало теста test_data_content ===")
 
         response = make_request(TestBaseAPI.API_URL)
@@ -68,6 +75,7 @@ class TestBaseAPI(APITestTemplate):
 
         object_ids_length = len(object_ids)
 
+        # Для пустого поискового запроса ожидаем 0 результатов
         assert total == 0
         TestBaseAPI.logger.debug(f"Значение по ключу total: {total} (ожидалось: 0)")
 

@@ -1,8 +1,19 @@
 from typing import Optional
 
+
 class APIBuilder:
+    """Класс для формирования URL адресов API запросов."""
+
     @staticmethod
     def build_url(endpoint: str, sep: Optional[str] = "?", **params) -> str:
+        """
+        Формирует URL с query-параметрами.
+
+        Args:
+            endpoint: Базовый URL endpoint
+            sep: Разделитель перед query-параметрами
+            **params: Параметры для добавления в query string
+        """
         url = f"{endpoint}"
 
         if params:
@@ -15,7 +26,13 @@ class APIBuilder:
 
     @staticmethod
     def build_url_with_id(base_url: str, object_id: str) -> str:
-        """Строит URL с ID объекта"""
+        """
+        Формирует URL для получения объекта по ID.
+
+        Args:
+            base_url: Базовый URL endpoint
+            object_id: Идентификатор объекта
+        """
         url = f"{base_url}/{object_id}"
 
         return url

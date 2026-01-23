@@ -8,14 +8,16 @@ from tests.src.API_param_builder import APIBuilder
 
 @pytest.mark.search
 class TestValidParams(APITestTemplate):
+    """Тесты для проверки API поиска с валидными параметрами."""
+
     BASE_API = "https://collectionapi.metmuseum.org/public/collection/v1/search"
 
-
+    # Валидные параметры поиска
     VALID_APIS = [
         # Простой поиск по ключевому слову
         APIBuilder.build_url(BASE_API, q="sunflowers"),
 
-        # Поиск с фильтрами (все должны включать q)
+        # Поиск с различными фильтрами
         APIBuilder.build_url(BASE_API, q="art", isHighlight=True),
         APIBuilder.build_url(BASE_API, q="painting", title=True),
         APIBuilder.build_url(BASE_API, q="asian", departmentId=6),
@@ -30,13 +32,13 @@ class TestValidParams(APITestTemplate):
     @pytest.mark.smoke
     @pytest.mark.positive
     def test_status_code(self, make_request):
+        """Проверяет корректный HTTP статус-код для валидного поискового запроса."""
         TestValidParams.logger.info("=== Начало теста test_status_code ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {TestValidParams.VALID_APIS[-1]}")
         response = make_request(TestValidParams.VALID_APIS[-1])
 
         assert response.status_code == 200
-
         TestValidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestValidParams.logger.info("=== Конец теста test_status_code ===")
@@ -45,19 +47,21 @@ class TestValidParams(APITestTemplate):
     @pytest.mark.validation
     @pytest.mark.parametrize("api_url", VALID_APIS)
     def test_data_structure(self, api_url, make_request):
+        """Проверяет структуру данных для валидных поисковых запросов."""
         TestValidParams.logger.info("=== Начало теста test_data_structure ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         if response.status_code == 502:
-            TestValidParams.logger.warning(f"API вернул 502, пропускаем проверку структуры для: {api_url}")
+            TestValidParams.logger.warning(f"API вернул 502, пропускаем проверку для: {api_url}")
             assert response.text
             return
 
         try:
             response_json = response.json()
 
+            # Нормализуем данные для валидации
             if response_json.get("objectIDs") is None:
                 response_json["objectIDs"] = []
 
@@ -74,17 +78,17 @@ class TestValidParams(APITestTemplate):
 
         TestValidParams.logger.info("=== Конец теста test_data_structure ===")
 
-
     @pytest.mark.positive
     @pytest.mark.parametrize("api_url", VALID_APIS)
     def test_data_content(self, api_url, make_request):
+        """Проверяет корректность данных для валидных поисковых запросов."""
         TestValidParams.logger.info("=== Начало теста test_data_content ===")
 
         TestValidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         if response.status_code == 502:
-            TestValidParams.logger.warning(f"API вернул 502, пропускаем проверку контента для: {api_url}")
+            TestValidParams.logger.warning(f"API вернул 502, пропускаем проверку для: {api_url}")
             return
 
         try:
@@ -105,5 +109,6 @@ class TestValidParams(APITestTemplate):
         TestValidParams.logger.debug(f"Количество элементов в objectIDs: {object_ids_length}")
 
         assert total == object_ids_length
+        TestValidParams.logger.debug(f"total равен длине objectIDs: {total == object_ids_length}")
 
         TestValidParams.logger.info("=== Конец теста test_data_content ===")

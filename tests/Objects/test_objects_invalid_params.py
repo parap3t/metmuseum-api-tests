@@ -7,9 +7,11 @@ from tests.src.API_param_builder import APIBuilder
 
 @pytest.mark.objects
 class TestInvalidParams(APITestTemplate):
+    """Тесты для проверки API объектов с невалидными query-параметрами."""
 
     BASE_API = "https://collectionapi.metmuseum.org/public/collection/v1/objects"
 
+    # Невалидные URL с ожидаемыми статус-кодами
     INVALID_APIS = [
         # Невалидные значения departmentIds
         (APIBuilder.build_url(BASE_API, departmentIds="abc"), 502),
@@ -32,6 +34,7 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url, expected_status", INVALID_APIS)
     def test_status_code(self, api_url, expected_status, make_request):
+        """Проверяет ожидаемые статус-коды для невалидных параметров."""
         TestInvalidParams.logger.info("=== Начало теста test_status_code ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
@@ -45,24 +48,25 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url,expected_status", INVALID_APIS)
     def test_data_structure(self, api_url, expected_status, make_request):
+        """Проверяет структуру данных при невалидных параметрах."""
         TestInvalidParams.logger.info("=== Начало теста test_data_structure ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         if expected_status == 502:
-            TestInvalidParams.logger.warning(f"API вернул {expected_status} Bad Gateway для URL: {api_url}")
+            TestInvalidParams.logger.warning(f"API вернул {expected_status} Bad Gateway")
             assert response.text
-            TestInvalidParams.logger.debug(f"API вернул {expected_status} с текстом: {response.text[:100]}...")
+            TestInvalidParams.logger.debug(f"Текст ответа: {response.text[:100]}...")
 
         elif expected_status == 400:
             try:
                 response_json = response.json()
-                TestInvalidParams.logger.debug(f"API вернул JSON для 400 ошибки: {response_json}")
+                TestInvalidParams.logger.debug(f"JSON ответ: {response_json}")
                 assert isinstance(response_json, dict)
             except:
                 assert response.text
-                TestInvalidParams.logger.debug(f"API вернул текст для 400 ошибки: {response.text[:100]}...")
+                TestInvalidParams.logger.debug(f"Текстовый ответ: {response.text[:100]}...")
 
         else:
             try:
@@ -78,13 +82,14 @@ class TestInvalidParams(APITestTemplate):
     @pytest.mark.negative
     @pytest.mark.parametrize("api_url,expected_status", INVALID_APIS)
     def test_data_content(self, api_url, expected_status, make_request):
+        """Проверяет содержимое данных при невалидных параметрах."""
         TestInvalidParams.logger.info("=== Начало теста test_data_content ===")
 
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
         if expected_status in [502, 400]:
-            TestInvalidParams.logger.warning(f"Пропускаем проверку контента для {expected_status} ошибки: {api_url}")
+            TestInvalidParams.logger.warning(f"Пропускаем проверку для {expected_status} ошибки")
             assert response.text
             return
 
@@ -100,7 +105,7 @@ class TestInvalidParams(APITestTemplate):
         if object_ids is None:
             object_ids = []
 
-        TestInvalidParams.logger.debug(f"API вернул: total={total}, objectIDs length={len(object_ids)}")
+        TestInvalidParams.logger.debug(f"total={total}, objectIDs length={len(object_ids)}")
 
         assert total == len(object_ids)
         TestInvalidParams.logger.debug(f"total равен длине objects_ids: {total == len(object_ids)}")

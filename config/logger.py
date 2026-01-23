@@ -3,22 +3,21 @@ from pathlib import Path
 
 
 class APILogger:
-    """Простой логер для API тестов"""
+    """Логер для записи результатов выполнения API тестов."""
 
     def __init__(self, api_name: str, log_dir: str = None):
         """
-        Создает логер для конкретного API.
+        Инициализирует логер для указанного API.
 
         Args:
-            api_name: Имя API (departments_base_api, objects_base_api и т.д.)
-            log_dir: Путь к директории логов. Если None, используется ../api_logs
+            api_name: Имя API для логирования
+            log_dir: Директория для сохранения логов
         """
         self.api_name = api_name
 
         # Определяем путь к директории логов
         if log_dir is None:
-            # Предполагаем, что скрипт в папке objects, а api_logs на уровень выше
-            current_dir = Path(__file__).parent  # objects
+            current_dir = Path(__file__).parent
             self.log_dir = current_dir.parent / "api_logs"
         else:
             self.log_dir = Path(log_dir)
@@ -30,8 +29,7 @@ class APILogger:
         self.logger = self._create_logger()
 
     def _create_logger(self) -> logging.Logger:
-        """Создает и настраивает логер"""
-        # Создаем уникальное имя логера
+        """Создает и настраивает объект логера."""
         logger_name = f"api_tests.{self.api_name}"
         logger = logging.getLogger(logger_name)
         logger.setLevel(logging.DEBUG)
@@ -62,25 +60,31 @@ class APILogger:
         return logger
 
     def info(self, message: str):
-        """Логирование информационного сообщения"""
+        """Записывает информационное сообщение в лог."""
         self.logger.info(message)
 
     def debug(self, message: str):
-        """Логирование отладочного сообщения"""
+        """Записывает отладочное сообщение в лог."""
         self.logger.debug(message)
 
     def warning(self, message: str):
-        """Логирование предупреждения"""
+        """Записывает предупреждение в лог."""
         self.logger.warning(message)
 
     def error(self, message: str, exc_info: bool = False):
-        """Логирование ошибки"""
+        """
+        Записывает сообщение об ошибке в лог.
+
+        Args:
+            message: Текст сообщения об ошибке
+            exc_info: Флаг для включения информации об исключении
+        """
         self.logger.error(message, exc_info=exc_info)
 
     def critical(self, message: str):
-        """Логирование критической ошибки"""
+        """Записывает сообщение о критической ошибке в лог."""
         self.logger.critical(message)
 
     def get_log_file_path(self) -> Path:
-        """Получить путь к файлу лога"""
+        """Возвращает путь к файлу лога."""
         return self.log_dir / f"{self.api_name}.log"

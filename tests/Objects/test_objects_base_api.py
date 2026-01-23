@@ -7,12 +7,15 @@ from tests.src.API_test_template import APITestTemplate
 
 @pytest.mark.objects
 class TestBaseAPI(APITestTemplate):
+    """Тесты для базового API объектов музея."""
+
     API_URL = "https://collectionapi.metmuseum.org/public/collection/v1/objects"
     logger = APILogger("objects_base_api")
 
     @pytest.mark.smoke
     @pytest.mark.positive
     def test_status_code(self, make_request):
+        """Проверяет корректный HTTP статус-код ответа API объектов."""
         TestBaseAPI.logger.info("=== Начало теста test_status_code ===")
 
         response = make_request(TestBaseAPI.API_URL)
@@ -25,6 +28,7 @@ class TestBaseAPI(APITestTemplate):
     @pytest.mark.validation
     @pytest.mark.positive
     def test_data_structure(self, make_request):
+        """Проверяет структуру данных в ответе API объектов."""
         TestBaseAPI.logger.info("=== Начало теста test_data_structure ===")
 
         response = make_request(TestBaseAPI.API_URL)
@@ -47,6 +51,7 @@ class TestBaseAPI(APITestTemplate):
 
     @pytest.mark.positive
     def test_data_content(self, make_request):
+        """Проверяет корректность данных в ответе API объектов."""
         TestBaseAPI.logger.info("=== Начало теста test_data_content ===")
 
         response = make_request(TestBaseAPI.API_URL)
