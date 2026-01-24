@@ -20,7 +20,7 @@ class TestBaseAPI(APITestTemplate):
 
         response = make_request(TestBaseAPI.API_URL)
 
-        assert response.status_code == 200
+        assert response.status_code == 200, "API должен возвращать статус 200"
         TestBaseAPI.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestBaseAPI.logger.info("=== Конец теста test_status_code ===")
@@ -41,10 +41,10 @@ class TestBaseAPI(APITestTemplate):
             TestBaseAPI.logger.error(f"Ошибка валидации данных: {e}")
             pytest.fail(f"Валидация данных не удалась: {e}")
 
-        assert isinstance(response_json, dict)
+        assert isinstance(response_json, dict), "Ответ API должен быть словарём"
         TestBaseAPI.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
 
-        assert validated_data is not None
+        assert validated_data is not None, "Данные должны соответствовать схеме DepartmentsSchema"
         TestBaseAPI.logger.debug(f"Данные соответствуют Pydantic модели: {validated_data is not None}")
 
         TestBaseAPI.logger.info("=== Конец теста test_data_structure ===")
@@ -64,7 +64,7 @@ class TestBaseAPI(APITestTemplate):
 
         departments = response_json.get("departments", [])
 
-        assert len(departments) > 0
+        assert len(departments) > 0, "API должен возвращать непустой список департаментов"
         TestBaseAPI.logger.debug(f"Количество отделов > 0: {len(departments) > 0}")
 
         TestBaseAPI.logger.info("=== Конец теста test_data_content ===")

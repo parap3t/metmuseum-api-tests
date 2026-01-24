@@ -28,7 +28,7 @@ class TestValidParams(APITestTemplate):
         TestValidParams.logger.info(f"Делаем запрос к API: {TestValidParams.VALID_APIS[0]}")
         response = make_request(TestValidParams.VALID_APIS[0])
 
-        assert response.status_code == 200
+        assert response.status_code == 200, "API должен возвращать статус 200 для валидного запроса"
         TestValidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestValidParams.logger.info("=== Конец теста test_status_code ===")
@@ -50,10 +50,10 @@ class TestValidParams(APITestTemplate):
             TestValidParams.logger.error(f"Ошибка валидации данных: {e}")
             pytest.fail(f"Валидация данных не удалась: {e}")
 
-        assert isinstance(response_json, dict)
+        assert isinstance(response_json, dict), "Ответ API должен быть словарём"
         TestValidParams.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
 
-        assert validated_data is not None
+        assert validated_data is not None, "Данные должны соответствовать схеме ObjectSchema"
         TestValidParams.logger.debug(f"Данные соответствуют Pydantic модели: {validated_data is not None}")
 
         TestValidParams.logger.info("=== Конец теста test_data_structure ===")
@@ -73,5 +73,5 @@ class TestValidParams(APITestTemplate):
             TestValidParams.logger.error(f"API ответ не соответствует типу JSON: {e}")
             pytest.fail(f"API ответ не соответствует типу JSON: {e}")
 
-        assert response_json
+        assert response_json, "Ответ должен содержать данные (не быть пустым)"
         TestValidParams.logger.debug(f"API ответ не пуст {response_json != {}}")

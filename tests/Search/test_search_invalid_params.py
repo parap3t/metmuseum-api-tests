@@ -44,7 +44,7 @@ class TestInvalidParams(APITestTemplate):
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
-        assert response.status_code in [200, 400, 422, 502]
+        assert response.status_code in [200, 400, 422, 502], "Для невалидных параметров ожидаются коды 200, 400, 422 или 502"
         TestInvalidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestInvalidParams.logger.info("=== Конец теста test_status_code ===")
@@ -60,7 +60,7 @@ class TestInvalidParams(APITestTemplate):
 
         if response.status_code == 502:
             TestInvalidParams.logger.warning(f"API вернул 502 для: {api_url}")
-            assert response.text
+            assert response.text, "При ошибке 502 должен быть текстовый ответ"
             return
 
         if response.status_code in [400, 422]:
@@ -68,13 +68,13 @@ class TestInvalidParams(APITestTemplate):
                 response_json = response.json()
                 TestInvalidParams.logger.debug(f"JSON ответ для ошибки: {response_json}")
             except:
-                assert response.text
+                assert response.text, "При ошибках 400/422 должен быть текстовый ответ"
                 TestInvalidParams.logger.debug(f"Текстовый ответ для ошибки: {response.text[:100]}...")
             return
 
         try:
             response_json = response.json()
-            assert isinstance(response_json, dict)
+            assert isinstance(response_json, dict), "Ответ API должен быть словарём"
             TestInvalidParams.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
         except Exception as e:
             TestInvalidParams.logger.error(f"API ответ не соответствует типу JSON: {e}")
@@ -111,7 +111,7 @@ class TestInvalidParams(APITestTemplate):
 
         TestInvalidParams.logger.debug(f"total={total}, objectIDs length={object_ids_length}")
 
-        assert total == object_ids_length
+        assert total == object_ids_length, "total должен соответствовать длине objectIDs"
         TestInvalidParams.logger.debug(f"Количество элементов в objectIDs равно total: {total == object_ids_length}")
 
         TestInvalidParams.logger.info("=== Конец теста test_data_content ===")

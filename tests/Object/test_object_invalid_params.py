@@ -30,7 +30,7 @@ class TestInvalidParams(APITestTemplate):
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
-        assert response.status_code in [400, 404, 422]
+        assert response.status_code in [400, 404, 422], "Для невалидных запросов ожидаются коды 400, 404 или 422"
         TestInvalidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestInvalidParams.logger.info("=== Конец теста test_status_code ===")
@@ -50,7 +50,7 @@ class TestInvalidParams(APITestTemplate):
             TestInvalidParams.logger.error(f"API ответ не соответствует типу JSON: {e}")
             pytest.fail(f"API ответ не соответствует типу JSON: {e}")
 
-        assert isinstance(response_json, dict)
+        assert isinstance(response_json, dict), "Ответ API должен быть словарём"
         TestInvalidParams.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
 
         TestInvalidParams.logger.info("=== Конец теста test_data_structure ===")
@@ -70,7 +70,7 @@ class TestInvalidParams(APITestTemplate):
             TestInvalidParams.logger.error(f"API ответ не соответствует типу JSON: {e}")
             pytest.fail(f"API ответ не соответствует типу JSON: {e}")
 
-        assert response_json
+        assert response_json, "Ответ должен содержать данные (не быть пустым)"
         TestInvalidParams.logger.debug(f"API ответ не пуст {response_json != {} }")
 
         TestInvalidParams.logger.info("=== Конец теста test_data_content ===")

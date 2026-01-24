@@ -38,7 +38,7 @@ class TestValidParams(APITestTemplate):
         TestValidParams.logger.info(f"Делаем запрос к API: {TestValidParams.VALID_APIS[-1]}")
         response = make_request(TestValidParams.VALID_APIS[-1])
 
-        assert response.status_code == 200
+        assert response.status_code == 200, "API должен возвращать статус 200 для валидного поискового запроса"
         TestValidParams.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestValidParams.logger.info("=== Конец теста test_status_code ===")
@@ -55,7 +55,7 @@ class TestValidParams(APITestTemplate):
 
         if response.status_code == 502:
             TestValidParams.logger.warning(f"API вернул 502, пропускаем проверку для: {api_url}")
-            assert response.text
+            assert response.text, "При ошибке 502 должен быть текстовый ответ"
             return
 
         try:
@@ -70,10 +70,10 @@ class TestValidParams(APITestTemplate):
             TestValidParams.logger.error(f"Ошибка валидации данных: {e}")
             pytest.fail(f"Валидация данных не удалась: {e}")
 
-        assert isinstance(response_json, dict)
+        assert isinstance(response_json, dict), "Ответ API должен быть словарём"
         TestValidParams.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
 
-        assert validated_data is not None
+        assert validated_data is not None, "Данные должны соответствовать схеме ObjectsSchema"
         TestValidParams.logger.debug(f"Данные соответствуют Pydantic модели: {validated_data is not None}")
 
         TestValidParams.logger.info("=== Конец теста test_data_structure ===")
@@ -108,7 +108,7 @@ class TestValidParams(APITestTemplate):
         TestValidParams.logger.debug(f"Значение по ключу total: {total}")
         TestValidParams.logger.debug(f"Количество элементов в objectIDs: {object_ids_length}")
 
-        assert total == object_ids_length
+        assert total == object_ids_length, "total должен соответствовать длине objectIDs"
         TestValidParams.logger.debug(f"total равен длине objectIDs: {total == object_ids_length}")
 
         TestValidParams.logger.info("=== Конец теста test_data_content ===")

@@ -40,7 +40,7 @@ class TestInvalidParams(APITestTemplate):
         TestInvalidParams.logger.info(f"Делаем запрос к API: {api_url}")
         response = make_request(api_url)
 
-        assert response.status_code == expected_status
+        assert response.status_code == expected_status, f"Ожидался статус {expected_status}, получен {response.status_code}"
         TestInvalidParams.logger.debug(f"Код API ответа: {response.status_code} (ожидался: {expected_status})")
 
         TestInvalidParams.logger.info("=== Конец теста test_status_code ===")
@@ -56,22 +56,22 @@ class TestInvalidParams(APITestTemplate):
 
         if expected_status == 502:
             TestInvalidParams.logger.warning(f"API вернул {expected_status} Bad Gateway")
-            assert response.text
+            assert response.text, "При ошибке 502 должен быть текстовый ответ"
             TestInvalidParams.logger.debug(f"Текст ответа: {response.text[:100]}...")
 
         elif expected_status == 400:
             try:
                 response_json = response.json()
                 TestInvalidParams.logger.debug(f"JSON ответ: {response_json}")
-                assert isinstance(response_json, dict)
+                assert isinstance(response_json, dict), "Ответ должен быть словарём при статусе 400"
             except:
-                assert response.text
+                assert response.text, "При ошибке 400 должен быть текстовый ответ"
                 TestInvalidParams.logger.debug(f"Текстовый ответ: {response.text[:100]}...")
 
         else:
             try:
                 response_json = response.json()
-                assert isinstance(response_json, dict)
+                assert isinstance(response_json, dict), "Ответ API должен быть словарём"
                 TestInvalidParams.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
             except Exception as e:
                 TestInvalidParams.logger.error(f"API ответ не соответствует типу JSON: {e}")
@@ -90,7 +90,7 @@ class TestInvalidParams(APITestTemplate):
 
         if expected_status in [502, 400]:
             TestInvalidParams.logger.warning(f"Пропускаем проверку для {expected_status} ошибки")
-            assert response.text
+            assert response.text, "При ошибках 502/400 должен быть текстовый ответ"
             return
 
         try:
@@ -107,10 +107,10 @@ class TestInvalidParams(APITestTemplate):
 
         TestInvalidParams.logger.debug(f"total={total}, objectIDs length={len(object_ids)}")
 
-        assert total == len(object_ids)
+        assert total == len(object_ids), "total должен соответствовать длине objectIDs"
         TestInvalidParams.logger.debug(f"total равен длине objects_ids: {total == len(object_ids)}")
 
         if "departmentIds=999999999" in api_url or "departmentIds=-999999" in api_url:
-            assert total == 0
+            assert total == 0, "Для несуществующего departmentIds total должен быть 0"
 
         TestInvalidParams.logger.info("=== Конец теста test_data_content ===")

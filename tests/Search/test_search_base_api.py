@@ -20,7 +20,7 @@ class TestBaseAPI(APITestTemplate):
 
         response = make_request(TestBaseAPI.API_URL)
 
-        assert response.status_code == 200
+        assert response.status_code == 200, "API должен возвращать статус 200 для пустого поискового запроса"
         TestBaseAPI.logger.debug(f"Код API ответа: {response.status_code}")
 
         TestBaseAPI.logger.info("=== Конец теста test_status_code ===")
@@ -46,10 +46,10 @@ class TestBaseAPI(APITestTemplate):
             TestBaseAPI.logger.error(f"Ошибка валидации данных: {e}")
             pytest.fail(f"Валидация данных не удалась: {e}")
 
-        assert isinstance(response_json, dict)
+        assert isinstance(response_json, dict), "Ответ API должен быть словарём"
         TestBaseAPI.logger.debug(f"API ответ является словарём: {isinstance(response_json, dict)}")
 
-        assert validated_data is not None
+        assert validated_data is not None, "Данные должны соответствовать схеме ObjectsSchema"
         TestBaseAPI.logger.debug(f"Данные соответствуют Pydantic модели: {validated_data is not None}")
 
         TestBaseAPI.logger.info("=== Конец теста test_data_structure ===")
@@ -76,13 +76,13 @@ class TestBaseAPI(APITestTemplate):
         object_ids_length = len(object_ids)
 
         # Для пустого поискового запроса ожидаем 0 результатов
-        assert total == 0
+        assert total == 0, "Пустой поисковый запрос должен возвращать total = 0"
         TestBaseAPI.logger.debug(f"Значение по ключу total: {total} (ожидалось: 0)")
 
-        assert object_ids_length == 0
+        assert object_ids_length == 0, "Пустой поисковый запрос должен возвращать пустой objectIDs"
         TestBaseAPI.logger.debug(f"Количество элементов в objectIDs: {object_ids_length} (ожидалось: 0)")
 
-        assert total == object_ids_length
+        assert total == object_ids_length, "total должен соответствовать длине objectIDs"
         TestBaseAPI.logger.debug(f"Количество элементов в objectIDs равно значению total: {total == object_ids_length}")
 
         TestBaseAPI.logger.info("=== Конец теста test_data_content ===")
