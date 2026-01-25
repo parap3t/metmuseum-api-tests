@@ -1,134 +1,134 @@
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:24 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:25 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:26 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
-2026-01-14 00:33:27 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:27 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:27 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:27 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:28 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:29 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:30 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:31 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
-2026-01-14 00:33:32 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:32 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:32 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:32 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:33 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:34 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:35 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку контента для статуса 502: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:36 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку контента для статуса 502: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку контента для статуса 502: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:37 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=37, objectIDs length=37
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=39, objectIDs length=39
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:38 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
-2026-01-14 00:33:39 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:33:39 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:39 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:39 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:39 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:40 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=7, objectIDs length=7
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=93, objectIDs length=93
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:41 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
-2026-01-14 00:33:42 - api_tests.search_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:33:42 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:42 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:32 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 502
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:33 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
+2026-01-25 09:55:34 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:34 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:34 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:34 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:35 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
+2026-01-25 09:55:36 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:36 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:36 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:36 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:37 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
+2026-01-25 09:55:38 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:38 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:38 - api_tests.search_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:38 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:39 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - WARNING - API вернул 502 для: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:40 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
+2026-01-25 09:55:41 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:41 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:41 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:41 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:42 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:43 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
+2026-01-25 09:55:44 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:44 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:44 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:44 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:45 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=True
+2026-01-25 09:55:46 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку для статуса 502
+2026-01-25 09:55:46 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:46 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?title=True
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку для статуса 502
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?departmentId=1
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - WARNING - Пропускаем проверку для статуса 502
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:47 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&isHighlight=123
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - DEBUG - total=37, objectIDs length=37
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&departmentId=-1
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - DEBUG - total=39, objectIDs length=39
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:48 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&geoLocation=123
+2026-01-25 09:55:49 - api_tests.search_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:55:49 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:49 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:49 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:49 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=abc&dateEnd=def
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=test&dateBegin=999999&dateEnd=-999999
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:50 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=null
+2026-01-25 09:55:51 - api_tests.search_invalid_param_api - DEBUG - total=7, objectIDs length=7
+2026-01-25 09:55:51 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:51 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:51 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:51 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=undefined
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - DEBUG - total=93, objectIDs length=93
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/search?q=
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - DEBUG - Количество элементов в objectIDs равно total: True
+2026-01-25 09:55:52 - api_tests.search_invalid_param_api - INFO - === Конец теста test_data_content ===

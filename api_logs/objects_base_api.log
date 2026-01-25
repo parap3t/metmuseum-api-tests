@@ -1,12 +1,12 @@
-2026-01-14 00:31:44 - api_tests.objects_base_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:31:55 - api_tests.objects_base_api - DEBUG - Код API ответа: 200
-2026-01-14 00:31:55 - api_tests.objects_base_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:31:55 - api_tests.objects_base_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:05 - api_tests.objects_base_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:32:05 - api_tests.objects_base_api - DEBUG - Данные соответствуют Pydantic модели: True
-2026-01-14 00:32:05 - api_tests.objects_base_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:05 - api_tests.objects_base_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:21 - api_tests.objects_base_api - DEBUG - Значение по ключу total > 0: True
-2026-01-14 00:32:21 - api_tests.objects_base_api - DEBUG - Количество элементов в objectIDs > 0: True
-2026-01-14 00:32:21 - api_tests.objects_base_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:32:21 - api_tests.objects_base_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:53:56 - api_tests.objects_base_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:05 - api_tests.objects_base_api - DEBUG - Код API ответа: 200
+2026-01-25 09:54:05 - api_tests.objects_base_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:05 - api_tests.objects_base_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:17 - api_tests.objects_base_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:54:17 - api_tests.objects_base_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-25 09:54:17 - api_tests.objects_base_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:17 - api_tests.objects_base_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:30 - api_tests.objects_base_api - DEBUG - Значение по ключу total > 0: True
+2026-01-25 09:54:30 - api_tests.objects_base_api - DEBUG - Количество элементов в objectIDs > 0: True
+2026-01-25 09:54:30 - api_tests.objects_base_api - DEBUG - Количество элементов в objectIDs равно значению total: True
+2026-01-25 09:54:30 - api_tests.objects_base_api - INFO - === Конец теста test_data_content ===

@@ -43,11 +43,11 @@ class APILogger:
             datefmt='%Y-%m-%d %H:%M:%S'
         )
 
-        # Создаем file handler
+        # Создаем file handler с режимом перезаписи
         log_file = self.log_dir / f"{self.api_name}.log"
         file_handler = logging.FileHandler(
             str(log_file),
-            mode='a',
+            mode='w',
             encoding='utf-8'
         )
         file_handler.setFormatter(formatter)

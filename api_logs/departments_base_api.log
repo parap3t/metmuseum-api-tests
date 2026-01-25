@@ -1,10 +1,10 @@
-2026-01-14 00:31:32 - api_tests.departments_base_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:31:33 - api_tests.departments_base_api - DEBUG - Код API ответа: 200
-2026-01-14 00:31:33 - api_tests.departments_base_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:31:33 - api_tests.departments_base_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:31:33 - api_tests.departments_base_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:31:33 - api_tests.departments_base_api - DEBUG - Данные соответствуют Pydantic модели: True
-2026-01-14 00:31:33 - api_tests.departments_base_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:31:33 - api_tests.departments_base_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:31:34 - api_tests.departments_base_api - DEBUG - Количество отделов > 0: True
-2026-01-14 00:31:34 - api_tests.departments_base_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:53:41 - api_tests.departments_base_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:53:42 - api_tests.departments_base_api - DEBUG - Код API ответа: 200
+2026-01-25 09:53:42 - api_tests.departments_base_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:53:42 - api_tests.departments_base_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:53:43 - api_tests.departments_base_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:53:43 - api_tests.departments_base_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-25 09:53:43 - api_tests.departments_base_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:53:43 - api_tests.departments_base_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:53:44 - api_tests.departments_base_api - DEBUG - Количество отделов > 0: True
+2026-01-25 09:53:44 - api_tests.departments_base_api - INFO - === Конец теста test_data_content ===

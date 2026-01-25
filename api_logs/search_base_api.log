@@ -1,12 +1,12 @@
-2026-01-14 00:33:22 - api_tests.search_base_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:33:22 - api_tests.search_base_api - DEBUG - Код API ответа: 200
-2026-01-14 00:33:22 - api_tests.search_base_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:33:22 - api_tests.search_base_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:33:23 - api_tests.search_base_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:33:23 - api_tests.search_base_api - DEBUG - Данные соответствуют Pydantic модели: True
-2026-01-14 00:33:23 - api_tests.search_base_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:33:23 - api_tests.search_base_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:33:24 - api_tests.search_base_api - DEBUG - Значение по ключу total: 0 (ожидалось: 0)
-2026-01-14 00:33:24 - api_tests.search_base_api - DEBUG - Количество элементов в objectIDs: 0 (ожидалось: 0)
-2026-01-14 00:33:24 - api_tests.search_base_api - DEBUG - Количество элементов в objectIDs равно значению total: True
-2026-01-14 00:33:24 - api_tests.search_base_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:55:30 - api_tests.search_base_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:55:30 - api_tests.search_base_api - DEBUG - Код API ответа: 200
+2026-01-25 09:55:30 - api_tests.search_base_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:55:30 - api_tests.search_base_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:55:31 - api_tests.search_base_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:55:31 - api_tests.search_base_api - DEBUG - Данные соответствуют Pydantic модели: True
+2026-01-25 09:55:31 - api_tests.search_base_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:55:31 - api_tests.search_base_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:55:31 - api_tests.search_base_api - DEBUG - Значение по ключу total: 0 (ожидалось: 0)
+2026-01-25 09:55:31 - api_tests.search_base_api - DEBUG - Количество элементов в objectIDs: 0 (ожидалось: 0)
+2026-01-25 09:55:31 - api_tests.search_base_api - DEBUG - Количество элементов в objectIDs равно значению total: True
+2026-01-25 09:55:31 - api_tests.search_base_api - INFO - === Конец теста test_data_content ===

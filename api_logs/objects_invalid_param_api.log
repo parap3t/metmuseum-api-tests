@@ -1,116 +1,116 @@
-2026-01-14 00:32:21 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:21 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 502 (ожидался: 502)
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 200 (ожидался: 200)
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:22 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 200 (ожидался: 200)
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:23 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
-2026-01-14 00:32:24 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:24 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:24 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:24 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:25 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:26 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - WARNING - API вернул 502 Bad Gateway для URL: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - DEBUG - API вернул 502 с текстом: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-str...
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:27 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
-2026-01-14 00:32:28 - api_tests.objects_invalid_param_api - DEBUG - API ответ является словарём: True
-2026-01-14 00:32:28 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:28 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:28 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 502 (ожидался: 502)
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:30 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
+2026-01-25 09:54:31 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 200 (ожидался: 200)
+2026-01-25 09:54:31 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:31 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:31 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 200 (ожидался: 200)
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:32 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
+2026-01-25 09:54:33 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:33 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:33 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:33 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:34 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
+2026-01-25 09:54:35 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:35 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:35 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_status_code ===
+2026-01-25 09:54:35 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - DEBUG - Код API ответа: 400 (ожидался: 400)
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_status_code ===
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - WARNING - API вернул 502 Bad Gateway
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - DEBUG - Текст ответа: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-str...
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:36 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
+2026-01-25 09:54:37 - api_tests.objects_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:54:37 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:37 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:37 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
+2026-01-25 09:54:38 - api_tests.objects_invalid_param_api - DEBUG - API ответ является словарём: True
+2026-01-25 09:54:38 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:38 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:38 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:29 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:39 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
+2026-01-25 09:54:40 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:40 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:40 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:40 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:40 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:30 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - DEBUG - API вернул JSON для 400 ошибки: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - DEBUG - API вернул текст для 400 ошибки: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_structure ===
+2026-01-25 09:54:41 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
+2026-01-25 09:54:42 - api_tests.objects_invalid_param_api - DEBUG - JSON ответ: Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03
+2026-01-25 09:54:42 - api_tests.objects_invalid_param_api - DEBUG - Текстовый ответ: "Date not valid. Dates must be in the format YYYY-MM-DD e.g. 1987-05-03"
 ...
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:31 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 502 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - DEBUG - total равен длине objects_ids: True
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:32 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - DEBUG - API вернул: total=0, objectIDs length=0
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - DEBUG - total равен длине objects_ids: True
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_content ===
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:33 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:34 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
-2026-01-14 00:32:35 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
-2026-01-14 00:32:35 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:35 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
-2026-01-14 00:32:36 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
-2026-01-14 00:32:36 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
-2026-01-14 00:32:36 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
-2026-01-14 00:32:36 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку контента для 400 ошибки: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
+2026-01-25 09:54:42 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_structure ===
+2026-01-25 09:54:42 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:42 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 502 ошибки
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=-999999
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - DEBUG - total равен длине objects_ids: True
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:43 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=999999999
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - DEBUG - total=0, objectIDs length=0
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - DEBUG - total равен длине objects_ids: True
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - INFO - === Конец теста test_data_content ===
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-13-01
+2026-01-25 09:54:44 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
+2026-01-25 09:54:45 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:45 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023-02-30
+2026-01-25 09:54:45 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
+2026-01-25 09:54:45 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:45 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=01-01-2023
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2023/01/01
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:46 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=1800-00-00
+2026-01-25 09:54:47 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
+2026-01-25 09:54:47 - api_tests.objects_invalid_param_api - INFO - === Начало теста test_data_content ===
+2026-01-25 09:54:47 - api_tests.objects_invalid_param_api - INFO - Делаем запрос к API: https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=abc&metadataDate=invalid
+2026-01-25 09:54:47 - api_tests.objects_invalid_param_api - WARNING - Пропускаем проверку для 400 ошибки
